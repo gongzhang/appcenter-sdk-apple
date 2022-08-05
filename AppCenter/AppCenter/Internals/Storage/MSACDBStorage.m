@@ -8,6 +8,8 @@
 #import "MSACStorageBindableArray.h"
 #import "MSACUtility+File.h"
 
+#pragma clang diagnostic ignored "-Wobjc-load-method"
+
 static dispatch_once_t sqliteConfigurationResultOnceToken;
 static int sqliteConfigurationResult = SQLITE_ERROR;
 

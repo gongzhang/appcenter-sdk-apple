@@ -9,6 +9,8 @@
 #import "MSACDelegateForwarderPrivate.h"
 #import "MSACLogger.h"
 
+#pragma clang diagnostic ignored "-Wobjc-load-method"
+
 static NSString *const kMSACCustomSelectorPrefix = @"custom_";
 static NSString *const kMSACReturnedValueSelectorPart = @"returnedValue:";
 

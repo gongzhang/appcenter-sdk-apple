@@ -5,6 +5,8 @@
 #import "MSACCustomApplicationDelegate.h"
 #import "MSACUtility+Application.h"
 
+#pragma clang diagnostic ignored "-Wobjc-load-method"
+
 // Original selectors with special handling.
 static NSString *const kMSACOpenURLSourceApplicationAnnotation = @"application:openURL:sourceApplication:annotation:";
 static NSString *const kMSACOpenURLOptions = @"application:openURL:options:";
