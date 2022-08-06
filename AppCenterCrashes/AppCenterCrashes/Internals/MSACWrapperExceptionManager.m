@@ -10,6 +10,8 @@
 #import "MSACWrapperExceptionInternal.h"
 #import "MSACWrapperExceptionManagerInternal.h"
 
+#pragma clang diagnostic ignored "-Wobjc-load-method"
+
 @implementation MSACWrapperExceptionManager : NSObject
 
 static NSString *const kMSACLastWrapperExceptionFileName = @"last_saved_wrapper_exception";

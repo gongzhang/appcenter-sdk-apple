@@ -5,6 +5,8 @@
 #import "MSACAppDelegateForwarder.h"
 #import "MSACDistribute.h"
 
+#pragma clang diagnostic ignored "-Wobjc-load-method"
+
 @implementation MSACDistributeAppDelegate
 
 #pragma mark - MSACAppDelegate
