@@ -20,18 +20,8 @@ esac
 /usr/libexec/PlistBuddy -c "Set :CFBundleVersion $version" "./AppCenterCrashes/AppCenterCrashes/Support/Info.plist"
 /usr/libexec/PlistBuddy -c "Set :CFBundleVersion $version" "./AppCenterAnalytics/AppCenterAnalytics/Support/Info.plist"
 
-xcodebuild \
-  -scheme "AppCenter" \
-  -configuration "Release" \
-  -destination generic/platform=iOS
-
-xcodebuild \
-  -scheme "AppCenterAnalytics" \
-  -configuration "Release" \
-  -destination generic/platform=iOS
-
-xcodebuild \
-  -scheme "AppCenterCrashes" \
+xcodebuild archive \
+  -scheme "All App Center Frameworks" \
   -configuration "Release" \
   -destination generic/platform=iOS
 
