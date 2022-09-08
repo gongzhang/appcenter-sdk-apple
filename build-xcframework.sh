@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-export DEVELOPER_DIR="/Applications/Xcode-beta.app/Contents/Developer"
+export DEVELOPER_DIR="/Applications/Xcode.app/Contents/Developer"
 
 version=$(cat Package.swift | grep APP_CENTER_C_VERSION | grep -p '\d\.\d\.\d' -o)
 
