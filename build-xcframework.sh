@@ -25,6 +25,18 @@ xcodebuild archive \
   -configuration "Release" \
   -destination generic/platform=iOS
 
+# a function that fix macOS framework (symlink to real file)
+function fix_xcframework() {
+  local name="$1"
+  cp -HR "AppCenter-SDK-Apple/XCFramework/$name.xcframework/macos-arm64_x86_64/$name.framework" "AppCenter-SDK-Apple/XCFramework/$name.xcframework/macos-arm64_x86_64/tmp"
+  rm "AppCenter-SDK-Apple/XCFramework/$name.xcframework/macos-arm64_x86_64/$name.framework"
+  mv "AppCenter-SDK-Apple/XCFramework/$name.xcframework/macos-arm64_x86_64/tmp" "AppCenter-SDK-Apple/XCFramework/$name.xcframework/macos-arm64_x86_64/$name.framework"
+}
+
+fix_xcframework AppCenter
+fix_xcframework AppCenterAnalytics
+fix_xcframework AppCenterCrashes
+
 /usr/libexec/PlistBuddy -c "Set :CFBundleVersion 1.0" "./AppCenter/AppCenter/Support/Info.plist"
 /usr/libexec/PlistBuddy -c "Set :CFBundleVersion 1.0" "./AppCenterCrashes/AppCenterCrashes/Support/Info.plist"
 /usr/libexec/PlistBuddy -c "Set :CFBundleVersion 1.0" "./AppCenterAnalytics/AppCenterAnalytics/Support/Info.plist"
