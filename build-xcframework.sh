@@ -33,9 +33,18 @@ function fix_xcframework() {
   mv "AppCenter-SDK-Apple/XCFramework/$name.xcframework/macos-arm64_x86_64/tmp" "AppCenter-SDK-Apple/XCFramework/$name.xcframework/macos-arm64_x86_64/$name.framework"
 }
 
-fix_xcframework AppCenter
-fix_xcframework AppCenterAnalytics
-fix_xcframework AppCenterCrashes
+# a function that copy the macos framework to correct location (and remove wrong symlink)
+function fix_xcframework2() {
+  local name="$1"
+  # cp -rP "AppCenter-SDK-Apple/macOS/$name.framework" "AppCenter-SDK-Apple/XCFramework/$name.xcframework/macos-arm64_x86_64/"
+  cp -HR "AppCenter-SDK-Apple/macOS/$name.framework" "AppCenter-SDK-Apple/XCFramework/$name.xcframework/macos-arm64_x86_64/tmp"
+  rm "AppCenter-SDK-Apple/XCFramework/$name.xcframework/macos-arm64_x86_64/$name.framework"
+  mv "AppCenter-SDK-Apple/XCFramework/$name.xcframework/macos-arm64_x86_64/tmp" "AppCenter-SDK-Apple/XCFramework/$name.xcframework/macos-arm64_x86_64/$name.framework"
+}
+
+fix_xcframework2 AppCenter
+fix_xcframework2 AppCenterAnalytics
+fix_xcframework2 AppCenterCrashes
 
 /usr/libexec/PlistBuddy -c "Set :CFBundleVersion 1.0" "./AppCenter/AppCenter/Support/Info.plist"
 /usr/libexec/PlistBuddy -c "Set :CFBundleVersion 1.0" "./AppCenterCrashes/AppCenterCrashes/Support/Info.plist"
