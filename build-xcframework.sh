@@ -50,4 +50,10 @@ fix_xcframework2 AppCenterCrashes
 /usr/libexec/PlistBuddy -c "Set :CFBundleVersion 1.0" "./AppCenterCrashes/AppCenterCrashes/Support/Info.plist"
 /usr/libexec/PlistBuddy -c "Set :CFBundleVersion 1.0" "./AppCenterAnalytics/AppCenterAnalytics/Support/Info.plist"
 
+# create carthage zip
+cd AppCenter-SDK-Apple/XCFramework
+7z a -mx=9 Carthage.xcframework.zip AppCenter.xcframework AppCenterAnalytics.xcframework AppCenterCrashes.xcframework
+cd ../..
+
+open AppCenter-SDK-Apple
 echo "Done."
