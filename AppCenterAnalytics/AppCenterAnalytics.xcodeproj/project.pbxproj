@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXAggregateTarget section */
@@ -374,48 +374,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = C9A91F2B230BFB8A0068070D;
 			remoteInfo = "AppCenterAnalytics tvOS Framework";
-		};
-		D55735C6254AAE6100B64478 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D55735B6254AAE6100B64478 /* AppCenter.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C9A91FB6230C01140068070D;
-			remoteInfo = "AppCenter iOS Framework";
-		};
-		D55735C8254AAE6100B64478 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D55735B6254AAE6100B64478 /* AppCenter.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 6E2395781D22EF4F00E543C8;
-			remoteInfo = "AppCenter iOS Tests";
-		};
-		D55735CA254AAE6100B64478 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D55735B6254AAE6100B64478 /* AppCenter.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C9A92007230C05D70068070D;
-			remoteInfo = "AppCenter macOS Framework";
-		};
-		D55735CC254AAE6100B64478 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D55735B6254AAE6100B64478 /* AppCenter.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 046AEAF61ECA562A00CBE511;
-			remoteInfo = "AppCenter macOS Tests";
-		};
-		D55735CE254AAE6100B64478 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D55735B6254AAE6100B64478 /* AppCenter.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C9A92024230C07A50068070D;
-			remoteInfo = "AppCenter tvOS Framework";
-		};
-		D55735D0254AAE6100B64478 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D55735B6254AAE6100B64478 /* AppCenter.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 0446DF2B1F3B864600C8E338;
-			remoteInfo = "AppCenter tvOS Tests";
 		};
 		D559CA092477ECFA00CF60D5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -1320,6 +1278,7 @@
 /* Begin PBXShellScriptBuildPhase section */
 		0431216E1EE0C213007054C5 /* Build tvOS Device Framework */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
@@ -1365,6 +1324,7 @@
 		};
 		324F3B94254782DB0006E223 /* Build iOS Simulator Framework */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
@@ -1406,6 +1366,7 @@
 		};
 		324F3C0025478BD10006E223 /* Copy Products */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
@@ -1425,6 +1386,7 @@
 		};
 		324F3DA025478FDF0006E223 /* Build tvOS Simulator Framework */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
@@ -1466,6 +1428,7 @@
 		};
 		8414DF7F2459D3C500B316C5 /* Combine XCFramework */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
@@ -1487,6 +1450,7 @@
 		};
 		C2D73CD7230FC74C00390198 /* Verify No Build Settings */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
@@ -1506,6 +1470,7 @@
 		};
 		C2D73CD8230FC75800390198 /* Verify No Build Settings */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
@@ -1525,6 +1490,7 @@
 		};
 		C2D73CD9230FC76800390198 /* Verify No Build Settings */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
@@ -1544,6 +1510,7 @@
 		};
 		D5E3B3EA247C051100D93E90 /* Build Mac Catalyst */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
@@ -1563,6 +1530,7 @@
 		};
 		E85547E81D2D6827002DF6E2 /* Build iOS Device Framework */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);

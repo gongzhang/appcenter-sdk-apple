@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXAggregateTarget section */
@@ -780,6 +780,13 @@
 			remoteGlobalIDString = 24C5BFF51C17781400C2BAFD;
 			remoteInfo = "OCHamcrest-tvOS";
 		};
+		F0A085A72A95C2530069EFB2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C24C9CD12472B3C30072C35D /* CrashReporter.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 32CF777F26DFBB080087748A;
+			remoteInfo = "CrashReporter macOS Static Framework";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -1295,6 +1302,7 @@
 			isa = PBXGroup;
 			children = (
 				C24C9CED2472B3C30072C35D /* CrashReporter.framework */,
+				F0A085A82A95C2530069EFB2 /* CrashReporter.framework */,
 				C24C9CF12472B3C30072C35D /* CrashReporter.framework */,
 				C24C9CF72472B3C30072C35D /* CrashReporter.framework */,
 				C24C9CEF2472B3C30072C35D /* libCrashReporter.a */,
@@ -1302,7 +1310,7 @@
 				C24C9CF92472B3C30072C35D /* libCrashReporter.a */,
 				C24C9CFF2472B3C30072C35D /* Tests macOS.xctest */,
 				C24C9D032472B3C30072C35D /* Tests iOS.xctest */,
-				C24C9D072472B3C30072C35D /* Tests tvOS.xctest */,
+				C24C9D072472B3C30072C35D /* CrashReporter tvOS Tests.xctest */,
 				C24C9D092472B3C30072C35D /* DemoCrash macOS.app */,
 				C24C9D0B2472B3C30072C35D /* DemoCrash iOS.app */,
 				C24C9D0F2472B3C30072C35D /* DemoCrash tvOS.app */,
@@ -1832,10 +1840,10 @@
 			remoteRef = C24C9D022472B3C30072C35D /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		C24C9D072472B3C30072C35D /* Tests tvOS.xctest */ = {
+		C24C9D072472B3C30072C35D /* CrashReporter tvOS Tests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
-			path = "Tests tvOS.xctest";
+			path = "CrashReporter tvOS Tests.xctest";
 			remoteRef = C24C9D062472B3C30072C35D /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
@@ -1956,6 +1964,13 @@
 			fileType = wrapper.framework;
 			path = OCHamcrest.framework;
 			remoteRef = DFCB805E2472D6770058D292 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F0A085A82A95C2530069EFB2 /* CrashReporter.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = CrashReporter.framework;
+			remoteRef = F0A085A72A95C2530069EFB2 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -2080,6 +2095,7 @@
 /* Begin PBXShellScriptBuildPhase section */
 		04EBBEEA1F01C0E10006B8AE /* Build tvOS Device Framework */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
@@ -2125,6 +2141,7 @@
 		};
 		324F3B96254783710006E223 /* Build iOS Simulator Framework */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
@@ -2166,6 +2183,7 @@
 		};
 		324F3C2225478C780006E223 /* Copy Products */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
@@ -2185,6 +2203,7 @@
 		};
 		324F3DBA254790430006E223 /* Build tvOS Simulator Framework */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
@@ -2226,6 +2245,7 @@
 		};
 		6E37297B1D1DE85000F1E4AE /* Build iOS Device Framework */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
@@ -2256,6 +2276,7 @@
 		};
 		8414DF852459D41B00B316C5 /* Combine XCFramework */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
@@ -2279,6 +2300,7 @@
 		};
 		C2B25A21230F03A200511D49 /* Verify No Build Settings */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
@@ -2298,6 +2320,7 @@
 		};
 		C2B25A22230F03A900511D49 /* Verify No Build Settings */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
@@ -2317,6 +2340,7 @@
 		};
 		C2B25A23230F03AF00511D49 /* Verify No Build Settings */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
@@ -2336,6 +2360,7 @@
 		};
 		D5E3B3EB247C052500D93E90 /* Build Mac Catalyst */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
