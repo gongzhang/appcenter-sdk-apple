@@ -1,10 +1,10 @@
 #!/bin/zsh
-
-export DEVELOPER_DIR="/Applications/Xcode.app/Contents/Developer"
+set -e
 
 version=$(cat Package.swift | grep APP_CENTER_C_VERSION | grep -p '\d\.\d\.\d' -o)
 
 echo "Build XCframework, version=$version"
+echo "DEVELOPER_DIR=$DEVELOPER_DIR"
 echo "Do you want to continue? (y/n)"
 read -r answer
 case $answer in
@@ -20,7 +20,7 @@ esac
 /usr/libexec/PlistBuddy -c "Set :CFBundleVersion $version" "./AppCenterCrashes/AppCenterCrashes/Support/Info.plist"
 /usr/libexec/PlistBuddy -c "Set :CFBundleVersion $version" "./AppCenterAnalytics/AppCenterAnalytics/Support/Info.plist"
 
-xcodebuild archive \
+xcodebuild build \
   -scheme "All App Center Frameworks" \
   -configuration "Release" \
   -destination generic/platform=iOS
@@ -38,7 +38,7 @@ function fix_xcframework2() {
   local name="$1"
   # cp -rP "AppCenter-SDK-Apple/macOS/$name.framework" "AppCenter-SDK-Apple/XCFramework/$name.xcframework/macos-arm64_x86_64/"
   cp -HR "AppCenter-SDK-Apple/macOS/$name.framework" "AppCenter-SDK-Apple/XCFramework/$name.xcframework/macos-arm64_x86_64/tmp"
-  rm "AppCenter-SDK-Apple/XCFramework/$name.xcframework/macos-arm64_x86_64/$name.framework"
+  rm -r "AppCenter-SDK-Apple/XCFramework/$name.xcframework/macos-arm64_x86_64/$name.framework"
   mv "AppCenter-SDK-Apple/XCFramework/$name.xcframework/macos-arm64_x86_64/tmp" "AppCenter-SDK-Apple/XCFramework/$name.xcframework/macos-arm64_x86_64/$name.framework"
 }
 
@@ -50,4 +50,10 @@ fix_xcframework2 AppCenterCrashes
 /usr/libexec/PlistBuddy -c "Set :CFBundleVersion 1.0" "./AppCenterCrashes/AppCenterCrashes/Support/Info.plist"
 /usr/libexec/PlistBuddy -c "Set :CFBundleVersion 1.0" "./AppCenterAnalytics/AppCenterAnalytics/Support/Info.plist"
 
+# create carthage zip
+cd AppCenter-SDK-Apple/XCFramework
+7z a -mx=9 Carthage.xcframework.zip AppCenter.xcframework AppCenterAnalytics.xcframework AppCenterCrashes.xcframework
+cd ../..
+
+open AppCenter-SDK-Apple
 echo "Done."

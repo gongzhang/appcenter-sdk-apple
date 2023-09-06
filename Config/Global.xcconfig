@@ -4,8 +4,8 @@
 SDKROOT = iphoneos
 
 // :Mark: Deployment
-IPHONEOS_DEPLOYMENT_TARGET = 11.0
-TVOS_DEPLOYMENT_TARGET = 11.0
+IPHONEOS_DEPLOYMENT_TARGET = 12.0
+TVOS_DEPLOYMENT_TARGET = 12.0
 MACOSX_DEPLOYMENT_TARGET = 11.0
 COPY_PHASE_STRIP = NO
 
@@ -89,7 +89,7 @@ GCC_PREPROCESSOR_DEFINITIONS = $(inherited) APP_CENTER_C_VERSION="\""$(VERSION_S
 // happens through malloc() and mmap() which always return at least 16byte alignment.
 // Read more about alignment in the c++ reference: http://en.cppreference.com/w/cpp/language/object#Alignment.
 
-WARNING_CFLAGS = -Weverything -Wno-objc-missing-property-synthesis -Wno-float-equal -Wno-pedantic -Wno-padded -Wno-sign-conversion -Wno-c++98-compat -Wno-c++98-compat-pedantic -Wno-auto-import -Wno-assign-enum -Wno-exit-time-destructors -Wno-global-constructors -Wno-cast-align
+WARNING_CFLAGS = -Weverything -Wno-objc-missing-property-synthesis -Wno-float-equal -Wno-pedantic -Wno-padded -Wno-sign-conversion -Wno-c++98-compat -Wno-c++98-compat-pedantic -Wno-auto-import -Wno-assign-enum -Wno-exit-time-destructors -Wno-global-constructors -Wno-cast-align -Wno-declaration-after-statement
 
 // These are all partially (but not completely?) independent of WARNING_CFLAGS
 // and need to be specified explicitly.
@@ -158,3 +158,6 @@ SWIFT_ENFORCE_EXCLUSIVE_ACCESS = on
 
 // Option for xcframework
 BUILD_LIBRARIES_FOR_DISTRIBUTION = YES
+
+// suppress warning for manual target order in Xcode 15
+DISABLE_MANUAL_TARGET_ORDER_BUILD_WARNING = YES
