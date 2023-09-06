@@ -1,0 +1,3 @@
+#include "./visionOS.xcconfig"
+
+EFFECTIVE_PLATFORM_NAME = -xruniversal

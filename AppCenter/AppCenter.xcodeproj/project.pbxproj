@@ -93,6 +93,19 @@
 			name = AppCenter;
 			productName = AppCenter;
 		};
+		F0836D922AA836BE000DFEC6 /* AppCenter visionOS Universal */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = F0836D962AA836BE000DFEC6 /* Build configuration list for PBXAggregateTarget "AppCenter visionOS Universal" */;
+			buildPhases = (
+				F0836D932AA836BE000DFEC6 /* Build visionOS Device Framework */,
+				F0836D942AA836BE000DFEC6 /* Build visionOS Simulator Framework */,
+				F0836D952AA836BE000DFEC6 /* Combine visionOS Universal Framework */,
+			);
+			dependencies = (
+			);
+			name = "AppCenter visionOS Universal";
+			productName = "Fat Framework";
+		};
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
@@ -1586,6 +1599,7 @@
 		F05B53792AA830A6004B2D62 /* AppCenter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AppCenter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F05B53BC2AA83265004B2D62 /* visionOS.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = visionOS.xcconfig; sourceTree = "<group>"; };
 		F05B53C52AA832FB004B2D62 /* visionOS.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = visionOS.modulemap; sourceTree = "<group>"; };
+		F0836D992AA83772000DFEC6 /* visionOS Universal.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "visionOS Universal.xcconfig"; sourceTree = "<group>"; };
 		F82E4C6C217F159A00EDAB34 /* sqlite3.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = sqlite3.c; path = ../../Vendor/SQLite3/sqlite3.c; sourceTree = "<group>"; };
 		F898179E2433327C008D92E1 /* MSACAppCenterUserDefaultsPrivate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSACAppCenterUserDefaultsPrivate.h; sourceTree = "<group>"; };
 		F8BA7A2823AA8A26009FBCCF /* MSACStorageBindableArray.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSACStorageBindableArray.h; sourceTree = "<group>"; };
@@ -1908,6 +1922,7 @@
 				04545DC8227B603D00A49E06 /* AppCenter.xcconfig */,
 				C9A92026230C08540068070D /* Info.plist */,
 				C26F4DED2546EB34006E0EB7 /* iOS Universal.xcconfig */,
+				F0836D992AA83772000DFEC6 /* visionOS Universal.xcconfig */,
 				0485AFEE1EAAAD0000C10CAF /* iOS.modulemap */,
 				049BC8281ECE3A5200FB6719 /* iOS.xcconfig */,
 				F05B53C52AA832FB004B2D62 /* visionOS.modulemap */,
@@ -2979,6 +2994,7 @@
 				F05B52AA2AA830A6004B2D62 /* AppCenter visionOS Framework */,
 				6E2395771D22EF4F00E543C8 /* AppCenter iOS Tests */,
 				6E04017D1D1CAC710051BCFA /* AppCenter iOS Universal */,
+				F0836D922AA836BE000DFEC6 /* AppCenter visionOS Universal */,
 				6E6BFC311D234FAE00DF7617 /* AppCenter iOS Documentation */,
 				C9A91FFE230C05D70068070D /* AppCenter macOS Framework */,
 				046AEACF1ECA562A00CBE511 /* AppCenter macOS Tests */,
@@ -3426,6 +3442,68 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/../Scripts/VerifyNoBuildSettings.swift\" ${PROJECT_NAME}.xcodeproj/project.pbxproj\n";
+			showEnvVarsInLog = 0;
+		};
+		F0836D932AA836BE000DFEC6 /* Build visionOS Device Framework */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Build visionOS Device Framework";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$SRCROOT/../Scripts/build-framework.sh\" \"$PROJECT_NAME visionOS Framework\" \"xros\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F0836D942AA836BE000DFEC6 /* Build visionOS Simulator Framework */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Build visionOS Simulator Framework";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$SRCROOT/../Scripts/build-framework.sh\" \"$PROJECT_NAME visionOS Framework\" \"xrsimulator\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F0836D952AA836BE000DFEC6 /* Combine visionOS Universal Framework */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$BUILD_DIR/$CONFIGURATION-xros/AppCenter.framework",
+				"$BUILD_DIR/$CONFIGURATION-xrsimulator/AppCenter.framework",
+			);
+			name = "Combine visionOS Universal Framework";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$BUILT_PRODUCTS_DIR/AppCenter.framework,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "DEVICE_FRAMEWORK=\"$BUILD_DIR/$CONFIGURATION-xros/$PRODUCT_NAME.framework\"\nSIMULATOR_FRAMEWORK=\"$BUILD_DIR/$CONFIGURATION-xrsimulator/$PRODUCT_NAME.framework\"\n\"$SRCROOT/../Scripts/combine-frameworks.sh\" \"$DEVICE_FRAMEWORK\" \"$SIMULATOR_FRAMEWORK\" \"$BUILT_PRODUCTS_DIR/$PRODUCT_NAME.framework\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -4241,6 +4319,22 @@
 			};
 			name = Release;
 		};
+		F0836D972AA836BE000DFEC6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F0836D992AA83772000DFEC6 /* visionOS Universal.xcconfig */;
+			buildSettings = {
+				DEVELOPMENT_TEAM = "";
+			};
+			name = Debug;
+		};
+		F0836D982AA836BE000DFEC6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F0836D992AA83772000DFEC6 /* visionOS Universal.xcconfig */;
+			buildSettings = {
+				DEVELOPMENT_TEAM = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -4375,6 +4469,15 @@
 			buildConfigurations = (
 				F05B53772AA830A6004B2D62 /* Debug */,
 				F05B53782AA830A6004B2D62 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F0836D962AA836BE000DFEC6 /* Build configuration list for PBXAggregateTarget "AppCenter visionOS Universal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F0836D972AA836BE000DFEC6 /* Debug */,
+				F0836D982AA836BE000DFEC6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
