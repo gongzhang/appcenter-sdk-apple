@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -750,6 +750,13 @@
 			remoteGlobalIDString = B21A71DA1DD2A38C0044BB1C;
 			remoteInfo = CrashLibIOS;
 		};
+		F05B539A2AA8310A004B2D62 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B20AE3B92102812300A1A195 /* AppCenter.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F05B53792AA830A6004B2D62;
+			remoteInfo = "AppCenter visionOS Framework";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -1477,6 +1484,7 @@
 			isa = PBXGroup;
 			children = (
 				C261440A230FE86400D65EBF /* AppCenter.framework */,
+				F05B539B2AA8310A004B2D62 /* AppCenter visionOS Framework.framework */,
 				B20AE3CB2102812300A1A195 /* AppCenter.xctest */,
 				C261440C230FE86400D65EBF /* AppCenter.framework */,
 				B20AE3CF2102812300A1A195 /* AppCenter.xctest */,
@@ -2359,6 +2367,13 @@
 			fileType = wrapper.framework;
 			path = CrashLibMac.framework;
 			remoteRef = C2F156AD2338C26A00798480 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F05B539B2AA8310A004B2D62 /* AppCenter visionOS Framework.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = AppCenter.framework;
+			remoteRef = F05B539A2AA8310A004B2D62 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */

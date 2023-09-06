@@ -56,6 +56,9 @@
          location = "group:iOS.xcconfig">
       </FileRef>
       <FileRef
+         location = "group:visionOS.xcconfig">
+      </FileRef>
+      <FileRef
          location = "group:macOS.xcconfig">
       </FileRef>
       <FileRef
