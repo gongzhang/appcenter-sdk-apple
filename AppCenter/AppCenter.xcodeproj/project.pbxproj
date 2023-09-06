@@ -74,6 +74,7 @@
 				8414DF7924599AF800B316C5 /* Combine XCFramework */,
 			);
 			dependencies = (
+				F0836DBC2AA8397B000DFEC6 /* PBXTargetDependency */,
 				C26F4E5A2546F38B006E0EB7 /* PBXTargetDependency */,
 				D559CA002477ECEF00CF60D5 /* PBXTargetDependency */,
 				D5E3B398247BEACB00D93E90 /* PBXTargetDependency */,
@@ -1297,6 +1298,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 24C5BFF51C17781400C2BAFD;
 			remoteInfo = "OCHamcrest-tvOS";
+		};
+		F0836DBB2AA8397B000DFEC6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6E0400FB1D1C98220051BCFA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F0836D922AA836BE000DFEC6;
+			remoteInfo = "AppCenter visionOS Universal";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -2991,11 +2999,11 @@
 				C229D8AB2546E7E5001909F3 /* AppCenter */,
 				8414DF7824599AF800B316C5 /* AppCenter XCFramework */,
 				C9A91FB5230C01140068070D /* AppCenter iOS Framework */,
-				F05B52AA2AA830A6004B2D62 /* AppCenter visionOS Framework */,
 				6E2395771D22EF4F00E543C8 /* AppCenter iOS Tests */,
 				6E04017D1D1CAC710051BCFA /* AppCenter iOS Universal */,
-				F0836D922AA836BE000DFEC6 /* AppCenter visionOS Universal */,
 				6E6BFC311D234FAE00DF7617 /* AppCenter iOS Documentation */,
+				F05B52AA2AA830A6004B2D62 /* AppCenter visionOS Framework */,
+				F0836D922AA836BE000DFEC6 /* AppCenter visionOS Universal */,
 				C9A91FFE230C05D70068070D /* AppCenter macOS Framework */,
 				046AEACF1ECA562A00CBE511 /* AppCenter macOS Tests */,
 				04FD114C1EF2F5F0000C5A5C /* AppCenter macOS Documentation */,
@@ -3176,6 +3184,8 @@
 				"$BUILD_DIR/$CONFIGURATION-iphonesimulator/AppCenter.framework",
 				"$BUILD_DIR/$CONFIGURATION-appletvos/AppCenter.framework",
 				"$BUILD_DIR/$CONFIGURATION-appletvsimulator/AppCenter.framework",
+				"$BUILD_DIR/$CONFIGURATION-xros/AppCenter.framework",
+				"$BUILD_DIR/$CONFIGURATION-xrsimulator/AppCenter.framework",
 			);
 			name = "Combine XCFramework";
 			outputPaths = (
@@ -4097,6 +4107,11 @@
 			isa = PBXTargetDependency;
 			name = "OCHamcrest-tvOS";
 			targetProxy = DFCB80202472D5010058D292 /* PBXContainerItemProxy */;
+		};
+		F0836DBC2AA8397B000DFEC6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F0836D922AA836BE000DFEC6 /* AppCenter visionOS Universal */;
+			targetProxy = F0836DBB2AA8397B000DFEC6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

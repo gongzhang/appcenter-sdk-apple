@@ -12,7 +12,7 @@ function add_framework() {
   [ -e "${framework_path}" ] && XC_FRAMEWORKS+=( -framework "${framework_path}")
 }
 add_framework "${BUILD_DIR}/${CONFIGURATION}"
-for SDK in iphoneos iphonesimulator appletvos appletvsimulator maccatalyst; do
+for SDK in iphoneos iphonesimulator xros xrsimulator appletvos appletvsimulator maccatalyst; do
   add_framework "${BUILD_DIR}/${CONFIGURATION}-${SDK}"
 done
 
