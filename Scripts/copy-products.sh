@@ -21,6 +21,7 @@ copy_framework() {
   fi
 }
 copy_framework "${BUILD_DIR}/${CONFIGURATION}-iphoneuniversal" "${PRODUCTS_DIR}/iOS" "framework"
+copy_framework "${BUILD_DIR}/${CONFIGURATION}-xruniversal" "${PRODUCTS_DIR}/visionOS" "framework"
 copy_framework "${BUILD_DIR}/${CONFIGURATION}" "${PRODUCTS_DIR}/macOS" "framework"
 copy_framework "${BUILD_DIR}/${CONFIGURATION}-appletvuniversal" "${PRODUCTS_DIR}/tvOS" "framework"
 copy_framework "${BUILD_DIR}/${CONFIGURATION}-xcframework" "${PRODUCTS_DIR}/XCFramework" "xcframework"
