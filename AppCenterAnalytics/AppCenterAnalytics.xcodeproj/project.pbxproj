@@ -62,6 +62,7 @@
 				8414DF7F2459D3C500B316C5 /* Combine XCFramework */,
 			);
 			dependencies = (
+				F0836E162AA84825000DFEC6 /* PBXTargetDependency */,
 				324F3BA72547854D0006E223 /* PBXTargetDependency */,
 				D5E3B3DC247BF60A00D93E90 /* PBXTargetDependency */,
 				D559CA0A2477ECFA00CF60D5 /* PBXTargetDependency */,
@@ -92,6 +93,19 @@
 			);
 			name = "AppCenterAnalytics iOS Documentation";
 			productName = "Jazzy Docs";
+		};
+		F0836DC52AA846B1000DFEC6 /* AppCenterAnalytics visionOS Universal */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = F0836DC92AA846B1000DFEC6 /* Build configuration list for PBXAggregateTarget "AppCenterAnalytics visionOS Universal" */;
+			buildPhases = (
+				F0836DC62AA846B1000DFEC6 /* Build visionOS Device Framework */,
+				F0836DC72AA846B1000DFEC6 /* Build visionOS Simulator Framework */,
+				F0836DC82AA846B1000DFEC6 /* Combine visionOS Universal Framework */,
+			);
+			dependencies = (
+			);
+			name = "AppCenterAnalytics visionOS Universal";
+			productName = "Fat Framework";
 		};
 /* End PBXAggregateTarget section */
 
@@ -264,6 +278,46 @@
 		E815912A1D526956003D5F3C /* MSACStartSessionLogTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E81591291D526956003D5F3C /* MSACStartSessionLogTests.m */; };
 		E815912C1D526A09003D5F3C /* MSACSessionTrackerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E815912B1D526A09003D5F3C /* MSACSessionTrackerTests.m */; };
 		E81591321D526C3B003D5F3C /* MSACSessionTrackerUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = E81591311D526C3B003D5F3C /* MSACSessionTrackerUtil.m */; };
+		F0836DE32AA8470C000DFEC6 /* MSACAnalyticsConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DA03D5D8EA1FEA1DC687CEF /* MSACAnalyticsConstants.h */; };
+		F0836DE42AA8470C000DFEC6 /* MSACPageLog.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E3E2CC71D359D5E00B1EE50 /* MSACPageLog.h */; };
+		F0836DE52AA8470C000DFEC6 /* MSACAnalyticsCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = 0485AF8D1EAA852A00C10CAF /* MSACAnalyticsCategory.h */; };
+		F0836DE62AA8470C000DFEC6 /* MSACAnalyticsAuthenticationProviderInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = B2350985211A69AA00F98D4F /* MSACAnalyticsAuthenticationProviderInternal.h */; };
+		F0836DE72AA8470C000DFEC6 /* MSACPropertyConfigurator.h in Headers */ = {isa = PBXBuildFile; fileRef = E758FA7B20FFDEE700011793 /* MSACPropertyConfigurator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F0836DE82AA8470C000DFEC6 /* MSACAnalyticsInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = 3813B9641DBFE68200831214 /* MSACAnalyticsInternal.h */; };
+		F0836DE92AA8470C000DFEC6 /* MSACAnalyticsTransmissionTarget.h in Headers */ = {isa = PBXBuildFile; fileRef = 3513432F205704A100E6DC7D /* MSACAnalyticsTransmissionTarget.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F0836DEA2AA8470C000DFEC6 /* MSACAnalyticsAuthenticationProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = B2E2ECB72114DAB800C688C0 /* MSACAnalyticsAuthenticationProvider.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F0836DEB2AA8470C000DFEC6 /* MSACSessionTracker.h in Headers */ = {isa = PBXBuildFile; fileRef = E8E48F9C1D515C3900A8C1B0 /* MSACSessionTracker.h */; };
+		F0836DEC2AA8470C000DFEC6 /* MSACEventPropertiesInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = 266ED07D29C2A2CC67AD1F60 /* MSACEventPropertiesInternal.h */; };
+		F0836DED2AA8470C000DFEC6 /* MSACAnalytics.h in Headers */ = {isa = PBXBuildFile; fileRef = E85547C31D2D6253002DF6E2 /* MSACAnalytics.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F0836DEE2AA8470C000DFEC6 /* MSACEventLog.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E3E2CC51D359D5E00B1EE50 /* MSACEventLog.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F0836DEF2AA8470C000DFEC6 /* MSACAnalytics+Validation.h in Headers */ = {isa = PBXBuildFile; fileRef = C27452D520AE0EF100B64B68 /* MSACAnalytics+Validation.h */; };
+		F0836DF02AA8470C000DFEC6 /* MSACAnalyticsDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 35BF19E21DF9C43F00193027 /* MSACAnalyticsDelegate.h */; };
+		F0836DF12AA8470C000DFEC6 /* MSACAnalyticsTransmissionTargetPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 3855D51320E2F03000CBC499 /* MSACAnalyticsTransmissionTargetPrivate.h */; };
+		F0836DF22AA8470C000DFEC6 /* MSACAnalyticsPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = E85547CE1D2D64F0002DF6E2 /* MSACAnalyticsPrivate.h */; };
+		F0836DF32AA8470C000DFEC6 /* MSACPropertyConfiguratorPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = E758FA8320FFE0E200011793 /* MSACPropertyConfiguratorPrivate.h */; };
+		F0836DF42AA8470C000DFEC6 /* MSACSessionTrackerPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 042B1D291FE3508100D6E04A /* MSACSessionTrackerPrivate.h */; };
+		F0836DF52AA8470C000DFEC6 /* MSACEventLogPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 38337D6E20C0AB0D00CEDA17 /* MSACEventLogPrivate.h */; };
+		F0836DF62AA8470C000DFEC6 /* AppCenter+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = E85547CF1D2D6521002DF6E2 /* AppCenter+Internal.h */; };
+		F0836DF72AA8470C000DFEC6 /* MSACAnalyticsTransmissionTargetInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = 351343352057093600E6DC7D /* MSACAnalyticsTransmissionTargetInternal.h */; };
+		F0836DF82AA8470C000DFEC6 /* MSACStartSessionLog.h in Headers */ = {isa = PBXBuildFile; fileRef = E8E48FA01D51670100A8C1B0 /* MSACStartSessionLog.h */; };
+		F0836DF92AA8470C000DFEC6 /* AppCenterAnalytics.h in Headers */ = {isa = PBXBuildFile; fileRef = E85547CC1D2D63EF002DF6E2 /* AppCenterAnalytics.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F0836DFA2AA8470C000DFEC6 /* MSACEventProperties.h in Headers */ = {isa = PBXBuildFile; fileRef = 266ED289BE3D9562F1F61348 /* MSACEventProperties.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F0836DFB2AA8470C000DFEC6 /* MSACSessionTrackerDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = E89B33EB1D5A8F3500FDE8FB /* MSACSessionTrackerDelegate.h */; };
+		F0836DFC2AA8470C000DFEC6 /* MSACLogWithNameAndProperties.h in Headers */ = {isa = PBXBuildFile; fileRef = F834E37020AC8E25003CB54D /* MSACLogWithNameAndProperties.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F0836DFD2AA8470C000DFEC6 /* MSACPropertyConfiguratorInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = 042E5E002175230600AFD6F9 /* MSACPropertyConfiguratorInternal.h */; };
+		F0836DFE2AA8470C000DFEC6 /* MSACAnalyticsAuthenticationProviderDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = B2ADB12F2123A72000D0D7D9 /* MSACAnalyticsAuthenticationProviderDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F0836E002AA8470C000DFEC6 /* MSACAnalytics.m in Sources */ = {isa = PBXBuildFile; fileRef = E85547C51D2D6253002DF6E2 /* MSACAnalytics.m */; };
+		F0836E012AA8470C000DFEC6 /* MSACPageLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E3E2CC81D359D5E00B1EE50 /* MSACPageLog.m */; };
+		F0836E022AA8470C000DFEC6 /* MSACStartSessionLog.m in Sources */ = {isa = PBXBuildFile; fileRef = E8E48FA11D51670100A8C1B0 /* MSACStartSessionLog.m */; };
+		F0836E032AA8470C000DFEC6 /* MSACPropertyConfigurator.m in Sources */ = {isa = PBXBuildFile; fileRef = E758FA7C20FFDEE700011793 /* MSACPropertyConfigurator.m */; };
+		F0836E042AA8470C000DFEC6 /* MSACAnalyticsTransmissionTarget.m in Sources */ = {isa = PBXBuildFile; fileRef = 35134330205704C100E6DC7D /* MSACAnalyticsTransmissionTarget.m */; };
+		F0836E052AA8470C000DFEC6 /* MSACAnalyticsAuthenticationProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = B2E2ECB82114DAB800C688C0 /* MSACAnalyticsAuthenticationProvider.m */; };
+		F0836E062AA8470C000DFEC6 /* MSACEventLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E3E2CC61D359D5E00B1EE50 /* MSACEventLog.m */; };
+		F0836E072AA8470C000DFEC6 /* MSACEventProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 266EDBD8487DA42DAB601DD9 /* MSACEventProperties.m */; };
+		F0836E082AA8470C000DFEC6 /* MSACLogWithNameAndProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = F834E37120AC8E25003CB54D /* MSACLogWithNameAndProperties.m */; };
+		F0836E092AA8470C000DFEC6 /* MSACSessionTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = E8E48F9D1D515C3900A8C1B0 /* MSACSessionTracker.m */; };
+		F0836E0A2AA8470C000DFEC6 /* MSACAnalyticsCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 0485AF8E1EAA852A00C10CAF /* MSACAnalyticsCategory.m */; };
+		F0836E0B2AA8470C000DFEC6 /* MSACAnalytics+Validation.m in Sources */ = {isa = PBXBuildFile; fileRef = C27452D120AE0DAC00B64B68 /* MSACAnalytics+Validation.m */; };
 		F82E4C71217F1FA600EDAB34 /* sqlite3.c in Sources */ = {isa = PBXBuildFile; fileRef = F82E4C70217F1FA600EDAB34 /* sqlite3.c */; settings = {COMPILER_FLAGS = "-w"; }; };
 		F82E4C72217F1FA600EDAB34 /* sqlite3.c in Sources */ = {isa = PBXBuildFile; fileRef = F82E4C70217F1FA600EDAB34 /* sqlite3.c */; settings = {COMPILER_FLAGS = "-w"; }; };
 		F82E4C73217F1FA600EDAB34 /* sqlite3.c in Sources */ = {isa = PBXBuildFile; fileRef = F82E4C70217F1FA600EDAB34 /* sqlite3.c */; settings = {COMPILER_FLAGS = "-w"; }; };
@@ -459,6 +513,13 @@
 			remoteGlobalIDString = 24C5BFF51C17781400C2BAFD;
 			remoteInfo = "OCHamcrest-tvOS";
 		};
+		F0836E152AA84825000DFEC6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E85547B81D2D6253002DF6E2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F0836DC52AA846B1000DFEC6;
+			remoteInfo = "AppCenterAnalytics visionOS Universal";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -546,6 +607,10 @@
 		E8E48F9D1D515C3900A8C1B0 /* MSACSessionTracker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = MSACSessionTracker.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		E8E48FA01D51670100A8C1B0 /* MSACStartSessionLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSACStartSessionLog.h; sourceTree = "<group>"; };
 		E8E48FA11D51670100A8C1B0 /* MSACStartSessionLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSACStartSessionLog.m; sourceTree = "<group>"; };
+		F0836E102AA8470C000DFEC6 /* AppCenterAnalytics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AppCenterAnalytics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0836E122AA8473D000DFEC6 /* visionOS.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = visionOS.xcconfig; sourceTree = "<group>"; };
+		F0836E132AA84755000DFEC6 /* visionOS Universal.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "visionOS Universal.xcconfig"; sourceTree = "<group>"; };
+		F0836E142AA84762000DFEC6 /* visionOS.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = visionOS.modulemap; sourceTree = "<group>"; };
 		F82E4C70217F1FA600EDAB34 /* sqlite3.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = sqlite3.c; path = ../../Vendor/SQLite3/sqlite3.c; sourceTree = "<group>"; };
 		F834E37020AC8E25003CB54D /* MSACLogWithNameAndProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSACLogWithNameAndProperties.h; sourceTree = "<group>"; };
 		F834E37120AC8E25003CB54D /* MSACLogWithNameAndProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MSACLogWithNameAndProperties.m; sourceTree = "<group>"; };
@@ -604,6 +669,13 @@
 				C2D73CE6230FC7F900390198 /* AppCenterAnalytics.framework in Frameworks */,
 				DFCB80412472D5EB0058D292 /* OCHamcrest.framework in Frameworks */,
 				C2392F6124642D3F00425640 /* OCMock.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F0836E0C2AA8470C000DFEC6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -762,6 +834,7 @@
 				C9CA69D92306CAF700EE82AA /* AppCenterAnalytics.framework */,
 				C9A91F34230BFB8A0068070D /* AppCenterAnalytics.framework */,
 				C9A91F3F230BFB970068070D /* AppCenterAnalytics.framework */,
+				F0836E102AA8470C000DFEC6 /* AppCenterAnalytics.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -816,6 +889,9 @@
 				04ED31E91EAAD32B0033BAAE /* macOS.modulemap */,
 				043121731EE0C248007054C5 /* tvOS.xcconfig */,
 				043121721EE0C248007054C5 /* tvOS.modulemap */,
+				F0836E132AA84755000DFEC6 /* visionOS Universal.xcconfig */,
+				F0836E142AA84762000DFEC6 /* visionOS.modulemap */,
+				F0836E122AA8473D000DFEC6 /* visionOS.xcconfig */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -960,6 +1036,41 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F0836DE22AA8470C000DFEC6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F0836DE32AA8470C000DFEC6 /* MSACAnalyticsConstants.h in Headers */,
+				F0836DE42AA8470C000DFEC6 /* MSACPageLog.h in Headers */,
+				F0836DE52AA8470C000DFEC6 /* MSACAnalyticsCategory.h in Headers */,
+				F0836DE62AA8470C000DFEC6 /* MSACAnalyticsAuthenticationProviderInternal.h in Headers */,
+				F0836DE72AA8470C000DFEC6 /* MSACPropertyConfigurator.h in Headers */,
+				F0836DE82AA8470C000DFEC6 /* MSACAnalyticsInternal.h in Headers */,
+				F0836DE92AA8470C000DFEC6 /* MSACAnalyticsTransmissionTarget.h in Headers */,
+				F0836DEA2AA8470C000DFEC6 /* MSACAnalyticsAuthenticationProvider.h in Headers */,
+				F0836DEB2AA8470C000DFEC6 /* MSACSessionTracker.h in Headers */,
+				F0836DEC2AA8470C000DFEC6 /* MSACEventPropertiesInternal.h in Headers */,
+				F0836DED2AA8470C000DFEC6 /* MSACAnalytics.h in Headers */,
+				F0836DEE2AA8470C000DFEC6 /* MSACEventLog.h in Headers */,
+				F0836DEF2AA8470C000DFEC6 /* MSACAnalytics+Validation.h in Headers */,
+				F0836DF02AA8470C000DFEC6 /* MSACAnalyticsDelegate.h in Headers */,
+				F0836DF12AA8470C000DFEC6 /* MSACAnalyticsTransmissionTargetPrivate.h in Headers */,
+				F0836DF22AA8470C000DFEC6 /* MSACAnalyticsPrivate.h in Headers */,
+				F0836DF32AA8470C000DFEC6 /* MSACPropertyConfiguratorPrivate.h in Headers */,
+				F0836DF42AA8470C000DFEC6 /* MSACSessionTrackerPrivate.h in Headers */,
+				F0836DF52AA8470C000DFEC6 /* MSACEventLogPrivate.h in Headers */,
+				F0836DF62AA8470C000DFEC6 /* AppCenter+Internal.h in Headers */,
+				F0836DF72AA8470C000DFEC6 /* MSACAnalyticsTransmissionTargetInternal.h in Headers */,
+				F0836DF82AA8470C000DFEC6 /* MSACStartSessionLog.h in Headers */,
+				F0836DF92AA8470C000DFEC6 /* AppCenterAnalytics.h in Headers */,
+				F0836DFA2AA8470C000DFEC6 /* MSACEventProperties.h in Headers */,
+				F0836DFB2AA8470C000DFEC6 /* MSACSessionTrackerDelegate.h in Headers */,
+				F0836DFC2AA8470C000DFEC6 /* MSACLogWithNameAndProperties.h in Headers */,
+				F0836DFD2AA8470C000DFEC6 /* MSACPropertyConfiguratorInternal.h in Headers */,
+				F0836DFE2AA8470C000DFEC6 /* MSACAnalyticsAuthenticationProviderDelegate.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
@@ -1078,6 +1189,24 @@
 			productReference = E85547D51D2D6723002DF6E2 /* AppCenterAnalytics.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		F0836DE02AA8470C000DFEC6 /* AppCenterAnalytics visionOS Framework */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F0836E0D2AA8470C000DFEC6 /* Build configuration list for PBXNativeTarget "AppCenterAnalytics visionOS Framework" */;
+			buildPhases = (
+				F0836DE12AA8470C000DFEC6 /* Verify No Build Settings */,
+				F0836DE22AA8470C000DFEC6 /* Headers */,
+				F0836DFF2AA8470C000DFEC6 /* Sources */,
+				F0836E0C2AA8470C000DFEC6 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "AppCenterAnalytics visionOS Framework";
+			productName = appcenteranalytics;
+			productReference = F0836E102AA8470C000DFEC6 /* AppCenterAnalytics.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -1132,6 +1261,8 @@
 				E85547D41D2D6723002DF6E2 /* AppCenterAnalytics iOS Tests */,
 				E85547E41D2D681F002DF6E2 /* AppCenterAnalytics iOS Universal */,
 				E85547E91D2D68C5002DF6E2 /* AppCenterAnalytics iOS Documentation */,
+				F0836DE02AA8470C000DFEC6 /* AppCenterAnalytics visionOS Framework */,
+				F0836DC52AA846B1000DFEC6 /* AppCenterAnalytics visionOS Universal */,
 				C9A91F36230BFB970068070D /* AppCenterAnalytics macOS Framework */,
 				046AEAB21ECA51AF00CBE511 /* AppCenterAnalytics macOS Tests */,
 				04FD11551EF2F818000C5A5C /* AppCenterAnalytics macOS Documentation */,
@@ -1439,6 +1570,8 @@
 				"$BUILD_DIR/$CONFIGURATION-iphonesimulator/AppCenterAnalytics.framework",
 				"$BUILD_DIR/$CONFIGURATION-appletvos/AppCenterAnalytics.framework",
 				"$BUILD_DIR/$CONFIGURATION-appletvsimulator/AppCenterAnalytics.framework",
+				"$BUILD_DIR/$CONFIGURATION-xros/AppCenterAnalytics.framework",
+				"$BUILD_DIR/$CONFIGURATION-xrsimulator/AppCenterAnalytics.framework",
 			);
 			name = "Combine XCFramework";
 			outputPaths = (
@@ -1557,6 +1690,84 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/../Scripts/generate-documentation.sh\" iOS\n";
+			showEnvVarsInLog = 0;
+		};
+		F0836DC62AA846B1000DFEC6 /* Build visionOS Device Framework */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Build visionOS Device Framework";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$SRCROOT/../Scripts/build-framework.sh\" \"$PROJECT_NAME visionOS Framework\" \"xros\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F0836DC72AA846B1000DFEC6 /* Build visionOS Simulator Framework */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Build visionOS Simulator Framework";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$SRCROOT/../Scripts/build-framework.sh\" \"$PROJECT_NAME visionOS Framework\" \"xrsimulator\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F0836DC82AA846B1000DFEC6 /* Combine visionOS Universal Framework */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$BUILD_DIR/$CONFIGURATION-xros/AppCenterAnalytics.framework",
+				"$BUILD_DIR/$CONFIGURATION-xrsimulator/AppCenterAnalytics.framework",
+			);
+			name = "Combine visionOS Universal Framework";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$BUILT_PRODUCTS_DIR/AppCenterAnalytics.framework,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "DEVICE_FRAMEWORK=\"$BUILD_DIR/$CONFIGURATION-xros/$PRODUCT_NAME.framework\"\nSIMULATOR_FRAMEWORK=\"$BUILD_DIR/$CONFIGURATION-xrsimulator/$PRODUCT_NAME.framework\"\n\"$SRCROOT/../Scripts/combine-frameworks.sh\" \"$DEVICE_FRAMEWORK\" \"$SIMULATOR_FRAMEWORK\" \"$BUILT_PRODUCTS_DIR/$PRODUCT_NAME.framework\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F0836DE12AA8470C000DFEC6 /* Verify No Build Settings */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Verify No Build Settings";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Scripts/VerifyNoBuildSettings.swift\" ${PROJECT_NAME}.xcodeproj/project.pbxproj\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1679,6 +1890,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F0836DFF2AA8470C000DFEC6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F0836E002AA8470C000DFEC6 /* MSACAnalytics.m in Sources */,
+				F0836E012AA8470C000DFEC6 /* MSACPageLog.m in Sources */,
+				F0836E022AA8470C000DFEC6 /* MSACStartSessionLog.m in Sources */,
+				F0836E032AA8470C000DFEC6 /* MSACPropertyConfigurator.m in Sources */,
+				F0836E042AA8470C000DFEC6 /* MSACAnalyticsTransmissionTarget.m in Sources */,
+				F0836E052AA8470C000DFEC6 /* MSACAnalyticsAuthenticationProvider.m in Sources */,
+				F0836E062AA8470C000DFEC6 /* MSACEventLog.m in Sources */,
+				F0836E072AA8470C000DFEC6 /* MSACEventProperties.m in Sources */,
+				F0836E082AA8470C000DFEC6 /* MSACLogWithNameAndProperties.m in Sources */,
+				F0836E092AA8470C000DFEC6 /* MSACSessionTracker.m in Sources */,
+				F0836E0A2AA8470C000DFEC6 /* MSACAnalyticsCategory.m in Sources */,
+				F0836E0B2AA8470C000DFEC6 /* MSACAnalytics+Validation.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -1746,6 +1976,11 @@
 			isa = PBXTargetDependency;
 			name = "OCHamcrest-tvOS";
 			targetProxy = DFCB80452472D6520058D292 /* PBXContainerItemProxy */;
+		};
+		F0836E162AA84825000DFEC6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F0836DC52AA846B1000DFEC6 /* AppCenterAnalytics visionOS Universal */;
+			targetProxy = F0836E152AA84825000DFEC6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1953,6 +2188,36 @@
 			};
 			name = Release;
 		};
+		F0836DCA2AA846B1000DFEC6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F0836E132AA84755000DFEC6 /* visionOS Universal.xcconfig */;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		F0836DCB2AA846B1000DFEC6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F0836E132AA84755000DFEC6 /* visionOS Universal.xcconfig */;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		F0836E0E2AA8470C000DFEC6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F0836E122AA8473D000DFEC6 /* visionOS.xcconfig */;
+			buildSettings = {
+				DEVELOPMENT_TEAM = "";
+			};
+			name = Debug;
+		};
+		F0836E0F2AA8470C000DFEC6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F0836E122AA8473D000DFEC6 /* visionOS.xcconfig */;
+			buildSettings = {
+				DEVELOPMENT_TEAM = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -2078,6 +2343,24 @@
 			buildConfigurations = (
 				E85547EB1D2D68C5002DF6E2 /* Debug */,
 				E85547EC1D2D68C5002DF6E2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F0836DC92AA846B1000DFEC6 /* Build configuration list for PBXAggregateTarget "AppCenterAnalytics visionOS Universal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F0836DCA2AA846B1000DFEC6 /* Debug */,
+				F0836DCB2AA846B1000DFEC6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F0836E0D2AA8470C000DFEC6 /* Build configuration list for PBXNativeTarget "AppCenterAnalytics visionOS Framework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F0836E0E2AA8470C000DFEC6 /* Debug */,
+				F0836E0F2AA8470C000DFEC6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -1,0 +1,4 @@
+#include "../../../Config/visionOS.xcconfig"
+#include "../../../Config/Framework.xcconfig"
+
+OTHER_LDFLAGS=$(inherited) -framework UIKit
