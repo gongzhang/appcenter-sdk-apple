@@ -1,0 +1,5 @@
+#include "../../../Config/visionOS.xcconfig"
+#include "../../../Config/Framework.xcconfig"
+
+HEADER_SEARCH_PATHS = "$(SRCROOT)/../Vendor/visionOS"/**
+LIBRARY_SEARCH_PATHS = "$(SRCROOT)/../Vendor/visionOS"/**
