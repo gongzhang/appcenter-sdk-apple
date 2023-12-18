@@ -7,7 +7,7 @@
 
 #if TARGET_OS_MACCATALYST
 #define APP_CENTER_C_NAME "appcenter.maccatalyst"
-#elif TARGET_OS_IOS
+#elif TARGET_OS_IOS || TARGET_OS_VISION
 #define APP_CENTER_C_NAME "appcenter.ios"
 #elif TARGET_OS_OSX
 #define APP_CENTER_C_NAME "appcenter.macos"
